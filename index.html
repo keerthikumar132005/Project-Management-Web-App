@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Project Manager</title>
   </head>
-  <body class="bg-stone-50">
-    <div class="flex flex-col gap-y-4 bg-[#EFC69B] rounded-md py-4 w-full">
-      <h1 class="uppercase self-center text-3xl font-mono font-semibold">
+  <body class="bg-stone-50 flex flex-col min-h-screen">
+    <div
+      class="flex flex-col gap-y-4 bg-[#EFC69B] rounded-md px-3 md:px-0 py-4 w-full"
+    >
+      <h1
+        class="uppercase self-center text-3xl font-mono font-semibold text-center"
+      >
         welcome to kk project management web app
       </h1>
       <h3 class="self-end">- Made with React JS and Tailwind CSS</h3>
     </div>
     <div id="modal-root"></div>
-    <div id="root"></div>
+    <div id="root" class="flex flex-grow"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

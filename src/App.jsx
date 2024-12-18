@@ -111,14 +111,14 @@ function App() {
     );
   } else if (projectsState.selectedProjectId === undefined) {
     content = (
-      <div className="flex h-full w-full justify-center items-center">
+      <div className="flex-grow  flex justify-center items-center">
         <NoProjectSelected onStartAddProject={handleStartAddProject} />
       </div>
     );
   }
 
   return (
-    <main className="h-screen flex gap-20">
+    <main className="flex flex-grow flex-col md:flex-row md:h-screen md:gap-20">
       <ProjectSideBar
         onSelectProject={handleSelectProject}
         onStartAddProject={handleStartAddProject}
