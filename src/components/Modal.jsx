@@ -8,8 +8,15 @@ const Modal = forwardRef(function Modal({ children, buttonCaption }, ref) {
       open() {
         dialog.current.showModal();
       },
+      close() {
+        dialog.current.close();
+      },
     };
   });
+
+  function handleClose() {
+    dialog.current.close();
+  }
 
   return createPortal(
     <dialog
@@ -17,8 +24,8 @@ const Modal = forwardRef(function Modal({ children, buttonCaption }, ref) {
       className="backdrop:bg-stone-900/90 p-4 rounded-md shadow-md "
     >
       {children}
-      <form action="dialog" className="mt-4 text-right">
-        <Button>{buttonCaption}</Button>
+      <form className="mt-4 text-right">
+        <Button onClick={handleClose}>{buttonCaption}</Button>
       </form>
     </dialog>,
     document.getElementById("modal-root")
